@@ -1,0 +1,2 @@
+# sensor-temperatura
+Proyecto de un sistema embebido, en este proyecto se creara un pequeño ejemplo de un sistema embebido de un sensor de temperatura, en donde utilizaremos el microcontrolador Arduino para recibir una señal relativa de un sensor DHT11 y poder mandar dicha señal a un servidor local, que este se muestre en pantalla y a su vez poder guardar el valor captado por el sensor dentro de una base de datos con MongoDB
