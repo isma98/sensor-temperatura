@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sensor DHT11</title>
+    <!-- Estilos de la pagina -->
     <style>
         *{
             padding: 0;
@@ -70,7 +71,7 @@
     <div class="title">
         <h1>Sensor de Temperatura - Serial</h1>
     </div>
-
+    <!-- zona principal donde se mostrara el contenido -->
     <div class="content">
          <form method="post" class="form" action="/inicio">
             <div class="form__box">
@@ -83,7 +84,7 @@
         </div>
     </div>
     
-   
+    <!-- Script para captar los valores recibidos del sensor en tiempo real -->   
     <script src="socket.io/socket.io.js" charset="utf-8"></script>
     <script>
         //Variable para recibir datos que lleguen del arduino

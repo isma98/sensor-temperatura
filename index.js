@@ -17,10 +17,12 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/sensor',
     {useNewUrlParser:true,useUnifiedTopology:true})
     .then( () => {
+        //Si la conexion es correcta
         console.log('La conexion a la base de datos fue exitosa');
         server.listen(3000, () => {
             console.log('http://localhost:3000/');
         })
+        //Si hay algun error en la conexion
     }).catch(err => console.log(err))
 
 /**************************CONEXION SERIAL CON ARDUINO**********************************/

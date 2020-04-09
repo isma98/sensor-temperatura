@@ -5,6 +5,7 @@ const Sensor = require('./model');
 
 //Funcion para cargar el inicio
 function home(req,res){
+    //Renderizamos el archivo index.edge
     return res.render('index');
 }
 
@@ -21,7 +22,7 @@ function sensorAdd(req, res){
             if(err) return res.status(500).send({message:"Error en el servidor"});
             if(!sensorStored) return res.status(406).send({message:"Error al registrar valor"}) 
             else{
-                //res.status(201).send({message:"Valor registrado..."});
+                //Renderizamos el archivo index.edge
                 return res.render('index');
             }
         })
@@ -37,8 +38,7 @@ function sensorInq(req,res){
         if(err) return res.status(500).send({message:"Error en el servidor"})
         if(!values) return res.status(404).send({message:"Error al listar los valores"})
         else{
-            //return res.status(200).send({message:values})
-            
+            //Renderizamos el archivo registros.edge y pasamos los valores de la base de datos
             return res.status(200).render('registros',{
                 values
             })
